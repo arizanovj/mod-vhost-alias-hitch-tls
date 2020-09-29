@@ -1,9 +1,19 @@
 # Dynamically Configured Mass Virtual Hosting with mod_vhost_alias, Let's encrypt and Hitch TLS proxy
 
-This is documentation on how to configure Dynamically Configured Mass Virtual Hosting on Apache. While using mod_vhost_alias you'll be able to to serve large number of web sites with similar server configs. 
+This is documentation on how to configure Dynamically Configured Mass Virtual Hosting on Apache. While using mod_vhost_alias you'll be able to to serve large number of web sites with similar server configs.
+
 
 With mod_vhost_alias you can use one server config for all the website and just create folders on the server that correspond to the domain. 
 In front of apache you'll have Hitch TLS proxy so you have secure communication with the clients. 
+
+You can read more about Hitch proxy at the follwing links:
+
+- [Let's Encrypt with Hitch and Varnish (CentOS7)](https://docs.varnish-software.com/tutorials/hitch-letsencrypt/)
+
+- [Hitch virtual hosts](https://github.com/varnish/hitch/blob/master/docs/vhosts.md)
+
+Note that the following content is for Debian based systems.
+
 # Setup Apache
 First you need to setup two apache vhosts. The first vhost will serve the traffic comming from the Hitch proxy. Hitch forwards the traffic comming from the frontend to 127.0.0.1:80. 
 ```sh
