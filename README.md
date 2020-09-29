@@ -121,7 +121,7 @@ Start hitch with the following command
 sudo systemctl start hitch
 ```
 
-When you add a new domain the process will again be:
+When you add a new domain the process will be:
  - Setup domain at /var/www/example1.com/html
  - Generate the SSL for example1.com as we did for example.com
  - Add the pem file at the end of the Htich config like this:
